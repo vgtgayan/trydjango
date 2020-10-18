@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <h1>Welcome to Product Detail Page !!!</h1>
+        <h2>{{objects.name}}</h2>
+        <p>{% if objects.description %}
+                {{objects.description}}
+            {% else %}
+                Description Not available.
+            {% endif %}</p>
+        <p>Price: ${{objects.price}}</p>
+{%endblock%}

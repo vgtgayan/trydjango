@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <h1>Welcome to Product Detail Page !!!</h1>
+    {% for obj in object_list%}
+        <h2>{{obj.id}} - <a href='{{obj.get_absolute_url}}'>{{obj.name}}</a></h2>
+        <p>{% if obj.description %}
+                {{obj.description}}
+            {% else %}
+                Description Not available.
+            {% endif %}</p>
+        <p>Price: ${{obj.price}}</p>
+    {%endfor%}
+{%endblock%}

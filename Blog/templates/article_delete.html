@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+    <h1>Welcome to Product Delete Page !!!</h1>
+    <h2>Do you want to delete the article "{{objects.name}}"?</h2>
+    <form method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <p><input type="submit" value="Delete" /><a href="../">Cancel</a></p>
+    </form>    
+{%endblock%}

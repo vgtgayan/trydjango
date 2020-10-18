@@ -1,0 +1,13 @@
+{%extends 'blog_base.html'%}
+
+{%block content%}
+    <h1>{{object.title}}</h1>
+    <p>{{object.content}}</p>
+
+    <p>{%if object.active%}
+        This Article is active.
+        {%else%}
+        This Article is inactive.
+        {%endif%}
+    </p>
+{%endblock%}
